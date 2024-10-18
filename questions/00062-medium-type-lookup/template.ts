@@ -1,1 +1,1 @@
-type LookUp<U, T> = any
+type LookUp<U, T> = U extends infer K ? T extends K[keyof K] ? K : never : never
